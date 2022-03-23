@@ -33,53 +33,29 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
-                        <th style="width: 10px">#</th>
-                        <th>Task</th>
-                        <th>Progress</th>
-                        <th style="width: 40px">Label</th>
+                        <th>Name</th>
+                        <th>Slug</th>
+                        <th>Description</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1.</td>
-                        <td>Update software</td>
-                        <td>
-                          <div class="progress progress-xs">
-                            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-danger">55%</span></td>
-                      </tr>
-                      <tr>
-                        <td>2.</td>
-                        <td>Clean database</td>
-                        <td>
-                          <div class="progress progress-xs">
-                            <div class="progress-bar bg-warning" style="width: 70%"></div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-warning">70%</span></td>
-                      </tr>
-                      <tr>
-                        <td>3.</td>
-                        <td>Cron job running</td>
-                        <td>
-                          <div class="progress progress-xs progress-striped active">
-                            <div class="progress-bar bg-primary" style="width: 30%"></div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-primary">30%</span></td>
-                      </tr>
-                      <tr>
-                        <td>4.</td>
-                        <td>Fix and squish bugs</td>
-                        <td>
-                          <div class="progress progress-xs progress-striped active">
-                            <div class="progress-bar bg-success" style="width: 90%"></div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-success">90%</span></td>
-                      </tr>
+                      @foreach ($categories_data as $cat)
+                        <tr>
+                          <td>{{ $cat->name }}</td>
+                          <td>{{ $cat->slug }}</td>
+                          <td>{{ $cat->description }}</td>
+                          <td class="d-flex">
+                            <a href="{{ route('category.edit',[$cat->id]) }}" class="btn btn-sm btn-primary mr-1"><i class="fas fa-edit"></i></a>
+                            <form action="{{ route('category.destroy',[$cat->id]) }}" class="mr-1" method="POST">
+                              @csrf
+                              @method('DELETE')
+                                <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
+                            </form>
+                          </td>
+                        </tr>
+                      @endforeach
+                     
                     </tbody>
                   </table>
                 </div>

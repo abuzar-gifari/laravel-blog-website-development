@@ -25,26 +25,25 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Create Category</h3>
+                  <h3 class="card-title">Update Category - {{ $category->name }}</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0">
                   <div class="card card-primary">
-                    <form action="{{ route('category.store') }}" method="POST">
+                    <form action="{{ route('category.update',[$category->id]) }}" method="POST">
                       @csrf
+                      @method('PUT')
                       @include('includes.errors')
                       <div class="card-body">
                         <div class="form-group">
                           <label for="name">Category Name</label>
-                          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Category Name">
+                          <input type="text" value="{{ $category->name }}" class="form-control" name="name" placeholder="Enter Category Name">
                         </div>
                         <div class="form-group">
                           <label for="description">Category Description</label>
-                          <textarea placeholder="Enter Category Description" name="description" id="description" cols="50" rows="10"></textarea>
+                          <textarea placeholder="Enter Category Description" name="description" cols="50" rows="10">{{ $category->description }}</textarea>
                         </div>
                       </div>
-                      <!-- /.card-body -->
-      
                       <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
                       </div>
