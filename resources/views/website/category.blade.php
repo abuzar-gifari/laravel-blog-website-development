@@ -17,13 +17,13 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-secondary mb-3">Politics</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -35,13 +35,13 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-success mb-3">Nature</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -53,13 +53,13 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_3.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_3.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-warning mb-3">Travel</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -73,13 +73,13 @@
 
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-secondary mb-3">Politics</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -91,13 +91,13 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-success mb-3">Nature</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -109,13 +109,13 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-danger mb-3">Sports</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -129,13 +129,13 @@
 
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_1.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-success mb-3">Nature</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -147,14 +147,14 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_2.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-danger mb-3">Sports</span>
           <span class="post-category text-white bg-secondary mb-3">Tech</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>
@@ -165,14 +165,14 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="entry2">
-          <a href="single.html"><img src="images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="single.html"><img src="{{ asset('website') }}/images/img_4.jpg" alt="Image" class="img-fluid rounded"></a>
           <div class="excerpt">
           <span class="post-category text-white bg-danger mb-3">Sports</span>
           <span class="post-category text-white bg-warning mb-3">Lifestyle</span>
 
           <h2><a href="single.html">The AI magically removes moving objects from videos.</a></h2>
           <div class="post-meta align-items-center text-left clearfix">
-            <figure class="author-figure mb-0 mr-3 float-left"><img src="images/person_1.jpg" alt="Image" class="img-fluid"></figure>
+            <figure class="author-figure mb-0 mr-3 float-left"><img src="{{ asset('website') }}/images/person_1.jpg" alt="Image" class="img-fluid"></figure>
             <span class="d-inline-block mt-1">By <a href="#">Carrol Atkinson</a></span>
             <span>&nbsp;-&nbsp; July 19, 2019</span>
           </div>

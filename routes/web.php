@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,16 +25,24 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/', function () {
     return view('website.home');
-});
+})->name('website');
 
 Route::get('/post', function () {
     return view('website.post');
 });
-Route::get('/category', function () {
-    return view('website.category');
-});
+// Route::get('/category', function () {
+//     return view('website.category');
+// });
 
 
-Route::get('/test', function () {
-    return view('admin.dashboard.index');
+// Route::get('/test', function () {
+//     return view('admin.dashboard.index');
+// });
+
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('/dashboard',function(){
+        return view('admin.dashboard.index');
+    });
+
+    Route::resource('/category',CategoryController::class);
 });
