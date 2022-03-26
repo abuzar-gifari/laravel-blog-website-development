@@ -17,7 +17,8 @@ class PostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {        
+    {  
+ 
         $post_data=Post::orderBy('created_at','DESC')->paginate(20);
         return view('admin.post.index',compact('post_data'));
     }
@@ -41,18 +42,23 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $category=Post::create([
+        $newName = 'product_'.time().'.'.$request->file('image')->getClientOriginalExtension();
+        //dd($newName);
+        $request->image->move('uploads/products/',$newName);
+
+        $data=[
             'title'=>$request->title,
             'slug'=>Str::slug($request->title,'-'),
-            'image'=>'image.jpg',
             'description'=>$request->description,
+            'image'=>$newName,
             // 'user_id'=>auth()->user()->id,
             'category_id'=>$request->category,
             'user_id'=>2,
             'published_at'=>Carbon::now(),
+            
+        ];
 
-        ]);
-
+        Post::create($data);
         Session::flash('success','Post Created Successfully');
         return redirect()->back();
     }

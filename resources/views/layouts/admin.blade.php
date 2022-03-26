@@ -214,31 +214,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </li>
             </ul>
           </li>
-          <a href="{{ route('tag.index') }}" class="nav-link active">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              Tags
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+
+
+{{-- for tags --}}
+
+          <li class="nav-item menu-open">
+            <a href="" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Simple Link
-                <span class="right badge badge-danger">New</span>
+                Tags
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('tag.index') }}" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tags list</p>
+                </a>
+              </li>
+            </ul>
           </li>
 
-          <li class="nav-item">
-            <a href="{{ route('post.index') }}" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+{{-- for posts --}}
+          
+          <li class="nav-item menu-open">
+            <a href="" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Post
+                Posts
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('post.index') }}" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Posts list</p>
+                </a>
+              </li>
+            </ul>
           </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

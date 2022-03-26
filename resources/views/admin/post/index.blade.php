@@ -44,7 +44,7 @@
                         <tr>
                           <td>
                             <div style="max-width: 70px; max-height:70px; overflow: hidden;">
-                              <img src="{{ asset($post->image) }}" alt="">
+                              <img src="{{ asset('uploads/products/'.$post->image) }}" alt="">
                             </div>
                           </td>
                           <td>{{ $post->title }}</td>
