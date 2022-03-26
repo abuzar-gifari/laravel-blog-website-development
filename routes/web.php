@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
@@ -32,21 +34,30 @@ Route::get('/', function () {
 Route::get('/post', function () {
     return view('website.post');
 });
-// Route::get('/category', function () {
-//     return view('website.category');
-// });
 
 
-// Route::get('/test', function () {
-//     return view('admin.dashboard.index');
-// });
+//login and registration routes
 
-Route::group(['prefix'=>'admin'],function(){
-    Route::get('/dashboard',function(){
-        return view('admin.dashboard.index');
+Route::get('login',[LoginController::class,'login'])->name('login');
+Route::post('login',[LoginController::class,'doLogin']);
+Route::get('registration',[LoginController::class,'registration'])->name('registration');
+Route::post('registration',[LoginController::class,'doRegistration']);
+Route::get('logout',[LoginController::class,'doLogout'])->name('logout');
+
+
+// admin routes
+
+Route::middleware('auth')->group(function(){
+    Route::middleware('isAdmin')->group(function(){
+        Route::group(['prefix'=>'admin'],function(){
+            Route::get('/dashboard',[HomeController::class,'see_dashboard'])->name('admin.dashboard');
+        
+            Route::resource('/category',CategoryController::class);
+            Route::resource('/tag',TagController::class);
+            Route::resource('/post',PostController::class);
+        });
+        
     });
-
-    Route::resource('/category',CategoryController::class);
-    Route::resource('/tag',TagController::class);
-    Route::resource('/post',PostController::class);
+    
 });
+
