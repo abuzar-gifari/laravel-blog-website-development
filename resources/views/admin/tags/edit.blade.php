@@ -5,12 +5,12 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Create Category</h1>
+          
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="{{ route('website') }}">Website</a></li>
-            <li class="breadcrumb-item active"><a href="{{ route('category.index') }}">Category List</a></li>
+            <li class="breadcrumb-item active"><a href="{{ route('tag.index') }}">Tag List</a></li>
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
@@ -25,23 +25,23 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">
-                  <h3 class="card-title">Update Category - {{ $category->name }}</h3>
+                  <h3 class="card-title">Update Tag - {{ $tag->name }}</h3>
                 </div>
                 <!-- /.card-header -->
                 <div class="card-body p-0">
                   <div class="card card-primary">
-                    <form action="{{ route('category.update',[$category->id]) }}" method="POST">
+                    <form action="{{ route('tag.update',[$tag->id]) }}" method="POST">
                       @csrf
                       @method('PUT')
                       @include('includes.errors')
                       <div class="card-body">
                         <div class="form-group">
-                          <label for="name">Category Name</label>
-                          <input type="text" value="{{ $category->name }}" class="form-control" name="name" placeholder="Enter Category Name">
+                          <label for="name">Tag Name</label>
+                          <input type="text" value="{{ $tag->name }}" class="form-control" name="name" placeholder="Enter Category Name">
                         </div>
                         <div class="form-group">
                           <label for="description">Category Description</label>
-                          <textarea placeholder="Enter Category Description" name="description" cols="50" rows="10">{{ $category->description }}</textarea>
+                          <textarea placeholder="Enter Category Description" name="description" cols="50" rows="10">{{ $tag->description }}</textarea>
                         </div>
                       </div>
                       <div class="card-footer">

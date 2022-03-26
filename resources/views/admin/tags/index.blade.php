@@ -47,8 +47,8 @@
                           <td>{{ $tag->slug }}</td>
                           <td>{{ $tag->description }}</td>
                           <td class="d-flex">
-                            <a href="{{ route('category.edit',[$tag->id]) }}" class="btn btn-sm btn-primary mr-1"><i class="fas fa-edit"></i></a>
-                            <form action="{{ route('category.destroy',[$tag->id]) }}" class="mr-1" method="POST">
+                            <a href="{{ route('tag.edit',[$tag->id]) }}" class="btn btn-sm btn-primary mr-1"><i class="fas fa-edit"></i></a>
+                            <form action="{{ route('tag.destroy',[$tag->id]) }}" class="mr-1" method="POST">
                               @csrf
                               @method('DELETE')
                                 <button type="submit" class="btn btn-sm btn-danger mr-1"><i class="fas fa-trash"></i></button>
