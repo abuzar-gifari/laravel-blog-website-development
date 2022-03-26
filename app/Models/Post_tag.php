@@ -5,14 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Post_tag extends Model
 {
     use HasFactory;
     protected $guarded=[];
 
-    protected $dates=[
-        'published_at'
-    ];
-
-
+    // TO DO
 }

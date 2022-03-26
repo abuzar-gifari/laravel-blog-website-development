@@ -61,6 +61,8 @@ class PostController extends Controller
             
         ];
 
+        // $data->tags()->attach($request->tags);
+
         Post::create($data);
         Session::flash('success','Post Created Successfully');
         return redirect()->back();

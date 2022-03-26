@@ -33,6 +33,7 @@
                   <table class="table table-striped">
                     <thead>
                       <tr>
+                        <th>Category ID</th>
                         <th>Name</th>
                         <th>Slug</th>
                         <th>Description</th>
@@ -42,6 +43,7 @@
                     <tbody>
                       @foreach ($categories_data as $cat)
                         <tr>
+                          <td>{{ $cat->id }}</td>
                           <td>{{ $cat->name }}</td>
                           <td>{{ $cat->slug }}</td>
                           <td>{{ $cat->description }}</td>
