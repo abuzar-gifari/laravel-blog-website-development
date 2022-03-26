@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\Tag;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -30,8 +31,9 @@ class PostController extends Controller
      */
     public function create()
     {
+        $tag=Tag::all();
         $categories=Category::all();
-        return view('admin.post.create',compact('categories'));
+        return view('admin.post.create',compact([ 'tag','categories' ]));
     }
 
     /**
@@ -42,6 +44,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $newName = 'product_'.time().'.'.$request->file('image')->getClientOriginalExtension();
         //dd($newName);
         $request->image->move('uploads/products/',$newName);
